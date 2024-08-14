@@ -8,22 +8,22 @@ CREATE TABLE if not exists public.DATASOURCECONFIG (
 	password VARCHAR(255),
 	initialize BOOLEAN
 );
-INSERT INTO DATASOURCECONFIG VALUES (1, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/test?currentSchema=test1&ApplicationName=MultiTenant', 'test1', 'postgres', 'postgres', true);
-INSERT INTO DATASOURCECONFIG VALUES (2, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/test?currentSchema=test2&ApplicationName=MultiTenant', 'test2', 'postgres', 'postgres', true);
+INSERT INTO DATASOURCECONFIG VALUES (1, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/sevenhallo?currentSchema=tenant_01&ApplicationName=multi-tenant', 'tenant_01', 'postgres', 'postgres', true);
+INSERT INTO DATASOURCECONFIG VALUES (2, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/sevenhallo?currentSchema=tenant_02&ApplicationName=multi-tenant', 'tenant_02', 'postgres', 'postgres', true);
 
 -- ##### DDL needs to be executed for Schema-Based MultiTenancy ############
-create schema if not exists test1;
-create schema if not exists test2;
-create table test1.city(id bigint, name varchar(200));
-create table test2.city(id bigint, name varchar(200));
+create schema if not exists tenant_01;
+create schema if not exists tenant_02;
+create table tenant_01.city(id bigint, name varchar(200));
+create table tenant_02.city(id bigint, name varchar(200));
 
-CREATE SEQUENCE "test1".city_seq
+CREATE SEQUENCE "tenant_01".city_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-CREATE SEQUENCE "test2".city_seq
+CREATE SEQUENCE "tenant_02".city_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
