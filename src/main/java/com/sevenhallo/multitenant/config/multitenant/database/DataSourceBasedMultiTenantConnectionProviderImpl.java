@@ -2,7 +2,6 @@ package com.sevenhallo.multitenant.config.multitenant.database;
 
 import lombok.AllArgsConstructor;
 import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.stereotype.Component;
 
@@ -13,12 +12,12 @@ import java.util.List;
 import java.util.Map;
 
 @Component
+@AllArgsConstructor
 public abstract class DataSourceBasedMultiTenantConnectionProviderImpl extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl {
 
     private final HashMap<String, DataSource> dataSources = new HashMap<>();
 
-    @Autowired
-    private DataSourceConfigRepository configRepo;
+    private final DataSourceConfigRepository configRepo;
 
     public DataSource getDataSource(String name) {
         if (dataSources.get(name) != null) {

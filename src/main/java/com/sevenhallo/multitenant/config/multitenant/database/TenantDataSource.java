@@ -2,7 +2,6 @@ package com.sevenhallo.multitenant.config.multitenant.database;
 
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
