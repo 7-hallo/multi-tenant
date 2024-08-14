@@ -1,10 +1,11 @@
 server:
   port: 8013
+
 spring:
   application:
-    name: MultiTenant
+    name: multi-tenant
   datasource:
-    url: 'jdbc:postgresql://localhost:5432/test?ApplicationName=MultiTenant'
+    url: 'jdbc:postgresql://localhost:5432/sevenhallo?ApplicationName=multi-tenant'
     username: 'postgres'
     password: 'postgres'
     driver-class-name: org.postgresql.Driver
