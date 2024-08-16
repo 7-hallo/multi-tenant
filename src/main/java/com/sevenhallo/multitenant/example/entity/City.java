@@ -1,4 +1,4 @@
-package com.sevenhallo.multitenant.entity;
+package com.sevenhallo.multitenant.example.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Table(name = "city")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class City implements Serializable {
+public class City extends BaseModel implements Serializable {
     private static final long serialVersionUID = -4551953276601557391L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
