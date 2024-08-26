@@ -2,7 +2,7 @@ package com.sevenhallo.example.controller;
 
 import com.sevenhallo.example.entity.City;
 import com.sevenhallo.example.service.CityService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 public class CityController {
 
-    @Autowired
-    private CityService cityService;
+    private final CityService cityService;
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public ResponseEntity<?> save(@RequestBody City city) {
