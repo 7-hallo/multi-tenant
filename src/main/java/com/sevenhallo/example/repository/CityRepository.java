@@ -1,6 +1,6 @@
-package com.sevenhallo.multitenant.example.repository;
+package com.sevenhallo.example.repository;
 
-import com.sevenhallo.multitenant.example.entity.City;
+import com.sevenhallo.example.entity.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.sevenhallo.multitenant.example.service;
+package com.sevenhallo.example.service;
 
-import com.sevenhallo.multitenant.example.entity.City;
-import com.sevenhallo.multitenant.example.repository.CityRepository;
+import com.sevenhallo.example.entity.City;
+import com.sevenhallo.example.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

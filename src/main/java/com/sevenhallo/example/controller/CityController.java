@@ -1,7 +1,7 @@
-package com.sevenhallo.multitenant.example.controller;
+package com.sevenhallo.example.controller;
 
-import com.sevenhallo.multitenant.example.entity.City;
-import com.sevenhallo.multitenant.example.service.CityService;
+import com.sevenhallo.example.entity.City;
+import com.sevenhallo.example.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

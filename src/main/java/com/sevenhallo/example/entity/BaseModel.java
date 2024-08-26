@@ -1,4 +1,4 @@
-package com.sevenhallo.multitenant.entity;
+package com.sevenhallo.example.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;

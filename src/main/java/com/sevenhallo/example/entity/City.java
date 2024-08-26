@@ -1,4 +1,4 @@
-package com.sevenhallo.multitenant.example.entity;
+package com.sevenhallo.example.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
