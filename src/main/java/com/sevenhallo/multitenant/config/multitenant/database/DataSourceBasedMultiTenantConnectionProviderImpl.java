@@ -22,7 +22,7 @@ public class DataSourceBasedMultiTenantConnectionProviderImpl extends AbstractDa
 
     private Map<String, DataSource> map = new HashMap<>();
 
-    boolean init = false;
+    private static boolean init = false;
 
     //@PostConstruct
     public void load() {
